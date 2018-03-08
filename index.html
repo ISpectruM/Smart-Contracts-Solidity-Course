@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <style>
+        table.table-bordered {
+            border: 2px solid #9da2a7;
+            margin-top: 20px;
+        }
+
+        table.table-bordered > tr > th {
+            border: 1px solid #9da2a7;
+        }
+
+        table.table-bordered > tr > td {
+            border: 1px solid #9da2a7;
+        }
+
+        table.table-bordered > tr > th {
+            background-color: #dfe8f2;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="nav">
+    <img src="images/1315685439.png">
+</nav>
+<div class="jumbotron jumbotron-fluid d-flex align-items-center" style=" background-color: beige">
+    <div class="container">
+        <div id="welcome" class="jumbotron align-items-center">
+            <div class="row justify-content-center">
+                <div class="col-7">
+                    <h2>Welcome to my pokemon catching DAPP</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="row">
+                <div class="col-sm-1">
+                    <button id="play" class="btn btn-outline-danger">Play</button>
+                </div>
+            </div>
+            <div id="container" style="display: none; margin-top: 5em">
+                <h3>Pokemons Available:</h3>
+                <div id="pokemons"></div>
+                <hr class="my-4">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label class="mr-sm-2" for="input">Enter Pokemon index or address:</label>
+                        <input id="input" type="text" class="form-control">
+                    </div>
+
+                    <button type="button" onclick="catchPokemon()" class="btn btn-outline-success">Catch</button>
+
+                    <button type="button" onclick="getInfo()" class="btn btn-outline-info">Show info</button>
+                </form>
+                <hr class="my-4">
+                <h2 id="message"></h2>
+                <div id="results"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
